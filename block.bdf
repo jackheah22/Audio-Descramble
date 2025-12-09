@@ -1,0 +1,155 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect -112 360 64 376)
+	(text "INPUT" (rect 133 0 175 15)(font "Arial" (font_size 6)))
+	(text "pin_name1" (rect 9 0 91 16)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 165 22)(font "Arial" (font_size 6)))
+)
+(symbol
+	(rect 120 296 472 472)
+	(text "pll" (rect 167 0 189 23)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 156 33 172)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "inclk0" (rect 0 0 47 18)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 54 51 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 56 72))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "areset" (rect 0 0 51 18)(font "Arial" (font_size 8)))
+		(text "areset" (rect 4 78 55 96)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 56 96))
+	)
+	(port
+		(pt 352 72)
+		(output)
+		(text "c0" (rect 0 0 20 18)(font "Arial" (font_size 8)))
+		(text "c0" (rect 331 54 351 72)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 352 96)
+		(output)
+		(text "locked" (rect 0 0 54 18)(font "Arial" (font_size 8)))
+		(text "locked" (rect 302 78 356 96)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "Cyclone IV E" (rect 240 154 334 170)(font "Arial" ))
+		(text "inclk0 frequency: 50.000 MHz" (rect 66 65 284 81)(font "Arial" ))
+		(text "Operation Mode: Normal" (rect 66 82 247 98)(font "Arial" ))
+		(text "Clk " (rect 67 109 95 125)(font "Arial" ))
+		(text "Ratio" (rect 97 109 135 125)(font "Arial" ))
+		(text "Ph (dg)" (rect 135 109 190 125)(font "Arial" ))
+		(text "DC (%)" (rect 186 109 240 125)(font "Arial" ))
+		(text "c0" (rect 72 127 89 143)(font "Arial" ))
+		(text "2/125" (rect 95 127 137 143)(font "Arial" ))
+		(text "0.00" (rect 144 127 177 143)(font "Arial" ))
+		(text "50.00" (rect 191 127 233 143)(font "Arial" ))
+		(line (pt 0 0)(pt 353 0))
+		(line (pt 353 0)(pt 353 177))
+		(line (pt 0 177)(pt 353 177))
+		(line (pt 0 0)(pt 0 177))
+		(line (pt 64 107)(pt 233 107))
+		(line (pt 64 124)(pt 233 124))
+		(line (pt 64 142)(pt 233 142))
+		(line (pt 64 107)(pt 64 142))
+		(line (pt 92 107)(pt 92 142)(line_width 3))
+		(line (pt 132 107)(pt 132 142)(line_width 3))
+		(line (pt 183 107)(pt 183 142)(line_width 3))
+		(line (pt 232 107)(pt 232 142))
+		(line (pt 56 56)(pt 287 56))
+		(line (pt 287 56)(pt 287 159))
+		(line (pt 56 159)(pt 287 159))
+		(line (pt 56 56)(pt 56 159))
+		(line (pt 351 72)(pt 287 72))
+		(line (pt 351 96)(pt 287 96))
+	)
+)
+(symbol
+	(rect 528 336 688 416)
+	(text "NCO_wrapper" (rect 5 0 110 16)(font "Arial" ))
+	(text "inst1" (rect 8 64 44 85)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 20 16)(font "Arial" ))
+		(text "clk" (rect 21 27 41 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "outsin[11..0]" (rect 0 0 92 16)(font "Arial" ))
+		(text "outsin[11..0]" (rect 62 27 154 43)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+)
+(symbol
+	(rect 8 432 40 464)
+	(text "GND" (rect 8 16 39 31)(font "Arial" (font_size 6)))
+	(text "inst2" (rect 3 21 39 42)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 27 16)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 27 16)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(connector
+	(pt 472 368)
+	(pt 528 368)
+)
+(connector
+	(pt 64 368)
+	(pt 120 368)
+)
+(connector
+	(pt 24 432)
+	(pt 24 392)
+)
+(connector
+	(pt 24 392)
+	(pt 120 392)
+)

@@ -1,0 +1,20 @@
+module NCO_wrapper(clk, outsin);
+
+
+input clk;
+output [11:0] outsin;
+
+
+
+   ncotest ncol_inst(
+		.clk       (clk),
+		.reset_n   (1'b1),
+		.clken     (1'b1),
+		.phi_inc_i (32'd601295),
+		.fsin_o    (outsin),
+		.fcos_o    (),
+		.out_valid ()
+	);
+	
+	endmodule
+	
